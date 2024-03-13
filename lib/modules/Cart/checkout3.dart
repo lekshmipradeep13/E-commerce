@@ -1,3 +1,4 @@
+
 import 'package:fashion_store/modules/Order/order_sreen1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _CompleteScreenState extends State<CompleteScreen> {
               padding: const EdgeInsets.only(left: 45,right: 58),
               child: Center(
                 child: Text(
-                                     '             Thank you for your purchase.           \n      You can view your order in ‘My Orders’        \n                         section.',
+                                     'Thank you for your purchase.\nYou can view your order in ‘My orders section.',textAlign: TextAlign.center,
                   style: GoogleFonts.ptSans(fontSize: 12, color: Color(0xff33302E)),
                 ),
               ),

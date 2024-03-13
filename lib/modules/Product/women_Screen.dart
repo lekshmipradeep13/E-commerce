@@ -259,7 +259,7 @@ class _WomenScreenState extends State<WomenScreen> {
                       ),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 60,
                     ),
                     Image.asset(
                       'assets/imge0.png',
@@ -296,26 +296,35 @@ class _WomenScreenState extends State<WomenScreen> {
                           return Padding(
                             padding: const EdgeInsets.only(right: 15),
                             child: Container(
-                              width: 213,
-                              height: 40,
+                              width: 203,
+                              height: 66,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8)),
-                              child: Column(
+                              child: Row(
                                 children: [
-                                  Expanded(
-                                    child: SizedBox(
-                                      height: 40,
-                                      width: 40,
-                                      child: Image.asset(
-                                        value.Collectionlist[index].imageUrl,
-                                        // width: 40,
-                                        // height: 40,
-                                        fit: BoxFit.fill,
-                                      ),
+                                  Container(width: 66,
+                                      height: 66,
+                                    child: Image.asset(
+                                      value.Collectionlist[index].imageUrl,
+                                      
+                                      fit: BoxFit.fill,
+                                      
                                     ),
                                   ),
-                                  Text(
-                                    value.Collectionlist[index].productname,
+                                  SizedBox(width: 9,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top:13,bottom: 13 ),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          value.Collectionlist[index].productname,style: GoogleFonts.ptSans(fontSize: 12,fontWeight: FontWeight.w500,color: Color(0xff1D1F22)),
+                                        ),
+                                         Text(
+                                          value.Collectionlist[index].price.toString(),
+                                          style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700,color: Color(0xff1D1F22),
+                                         )),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -352,7 +361,7 @@ class _WomenScreenState extends State<WomenScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                '',
+                                ' I Sale up to 40%',
                                 style: GoogleFonts.ptSans(
                                     fontWeight: FontWeight.w300,
                                     fontSize: 14,
@@ -378,7 +387,7 @@ class _WomenScreenState extends State<WomenScreen> {
                     ),
                     SizedBox(height: 19),
                     Container(
-                      height: 209,
+                      height: 210,
                       width: 312,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -426,23 +435,26 @@ class _WomenScreenState extends State<WomenScreen> {
                           child: Row(
                             children: [
                               Image.asset('assets/homeimg10.png'),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Text('T-Shirts',
+                              Padding(
+                                padding: const EdgeInsets.only(top: 26),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Text('T-Shirts',
+                                        style: GoogleFonts.ptSans(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 13,
+                                            color: Color(0xff737680))),
+                                    Text(
+                                      'The \nOffice\n Life',
                                       style: GoogleFonts.ptSans(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 13,
-                                          color: Color(0xff737680))),
-                                  Text(
-                                    'The \nOffice\n Life',
-                                    style: GoogleFonts.ptSans(
-                                        fontWeight: FontWeight.w300,
-                                        fontSize: 17,
-                                        color: Color(0xff1D1F22)),
-                                  )
-                                ],
+                                          fontWeight: FontWeight.w300,
+                                          fontSize: 17,
+                                          color: Color(0xff1D1F22)),
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           ),
@@ -459,21 +471,24 @@ class _WomenScreenState extends State<WomenScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Text('Dresses',
-                                      style: GoogleFonts.ptSans(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 13,
-                                          color: Color(0xff737680))),
-                                  Text('Elegant \n Design',
-                                      style: GoogleFonts.ptSans(
-                                          fontWeight: FontWeight.w300,
-                                          fontSize: 18,
-                                          color: Color(0xff1D1F22)))
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text('Dresses',
+                                        style: GoogleFonts.ptSans(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 13,
+                                            color: Color(0xff737680))),
+                                    Text('Elegant \n Design',
+                                        style: GoogleFonts.ptSans(
+                                            fontWeight: FontWeight.w300,
+                                            fontSize: 18,
+                                            color: Color(0xff1D1F22)))
+                                  ],
+                                ),
                               ),
                               Image.asset('assets/homeimg11.png')
                             ],

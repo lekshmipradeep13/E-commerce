@@ -1,3 +1,5 @@
+
+
 import 'package:fashion_store/modules/Cart/cart_screen.dart';
 import 'package:fashion_store/modules/Cart/checkout.dart';
 import 'package:fashion_store/modules/Cart/checkout1.dart';
@@ -56,6 +58,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: HomeScreen(),
+       
+       
       ),
     );
   }
