@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Center(
                     child: Text(
-                  'GemStore',
+                  'stored',
                   style: GoogleFonts.ptSans(
                       fontWeight: FontWeight.w700, fontSize: 20),
                 )),

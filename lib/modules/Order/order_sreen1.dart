@@ -31,7 +31,7 @@ class _OrderScreen1State extends State<OrderScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20),
+        padding: const EdgeInsets.only(left: 20,right: 20,top:32 ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
