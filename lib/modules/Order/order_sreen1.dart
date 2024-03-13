@@ -31,87 +31,90 @@ class _OrderScreen1State extends State<OrderScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20,top:32 ),
+        padding: const EdgeInsets.only(left: 20,right: 14,top:32 ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedindex = 0;
-                    });
-                  },
-                  child: Container(
-                      width: 91,
-                      height: 28,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color:
-                              selectedindex == 0 ? Colors.black : Colors.white),
-                      child: Center(
-                        child: Text(
-                          'Pending',
-                          style: GoogleFonts.ptSans(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: selectedindex == 0
-                                  ? Colors.white
-                                  : Colors.black),
-                        ),
-                      )),
-                ),
-                SizedBox(width: 18,),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedindex = 1;
-                    });
-                  },
-                  child: Container(
-                      width: 91,
-                      height: 28,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color:
-                              selectedindex == 1 ? Colors.black : Colors.white),
-                      child: Center(
-                        child: Text(
-                          'Delivered',
-                          style: GoogleFonts.ptSans(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: selectedindex == 1
-                                  ? Colors.white
-                                  : Colors.black),
-                        ),
-                      )),
-                ),
-                GestureDetector(
+            Padding(
+              padding: const EdgeInsets.only(left: 33,right: 33),
+              child: Row(
+                children: [
+                  GestureDetector(
                     onTap: () {
                       setState(() {
-                        selectedindex = 2;
+                        selectedindex = 0;
                       });
                     },
                     child: Container(
-                      width: 91,
-                      height: 28,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color:
-                              selectedindex == 2 ? Colors.black : Colors.white),
-                      child: Center(
-                        child: Text('Cancelled',
+                        width: 91,
+                        height: 28,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color:
+                                selectedindex == 0 ? Colors.black : Colors.white),
+                        child: Center(
+                          child: Text(
+                            'Pending',
                             style: GoogleFonts.ptSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                color: selectedindex == 2
+                                color: selectedindex == 0
                                     ? Colors.white
-                                    : Colors.black)),
-                      ),
-                    )),
-              ],
+                                    : Colors.black),
+                          ),
+                        )),
+                  ),
+                  SizedBox(width: 18,),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedindex = 1;
+                      });
+                    },
+                    child: Container(
+                        width: 91,
+                        height: 28,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color:
+                                selectedindex == 1 ? Colors.black : Colors.white),
+                        child: Center(
+                          child: Text(
+                            'Delivered',
+                            style: GoogleFonts.ptSans(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: selectedindex == 1
+                                    ? Colors.white
+                                    : Colors.black),
+                          ),
+                        )),
+                  ),
+                  GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedindex = 2;
+                        });
+                      },
+                      child: Container(
+                        width: 91,
+                        height: 28,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color:
+                                selectedindex == 2 ? Colors.black : Colors.white),
+                        child: Center(
+                          child: Text('Cancelled',
+                              style: GoogleFonts.ptSans(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: selectedindex == 2
+                                      ? Colors.white
+                                      : Colors.black)),
+                        ),
+                      )),
+                ],
+              ),
             ),
     Expanded(
             child: PageView(  scrollDirection: Axis.horizontal,
