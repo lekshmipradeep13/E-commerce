@@ -58,7 +58,7 @@ class _CompleteScreenState extends State<CompleteScreen> {
                     style: GoogleFonts.ptSans(fontSize: 16),
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderScreen(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>OrderScreen(),));
                   },
                   color: Colors.black,
                 ),
