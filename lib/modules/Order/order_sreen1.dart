@@ -43,7 +43,9 @@ class _OrderScreen1State extends State<OrderScreen> {
                     onTap: () {
                       setState(() {
                         selectedindex = 0;
+                      
                       });
+                       pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.bounceIn);
                     },
                     child: Container(
                         width: 91,
@@ -70,6 +72,7 @@ class _OrderScreen1State extends State<OrderScreen> {
                       setState(() {
                         selectedindex = 1;
                       });
+                       pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.bounceIn);
                     },
                     child: Container(
                         width: 91,
@@ -95,6 +98,7 @@ class _OrderScreen1State extends State<OrderScreen> {
                         setState(() {
                           selectedindex = 2;
                         });
+                        pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.bounceIn);
                       },
                       child: Container(
                         width: 91,
@@ -117,27 +121,34 @@ class _OrderScreen1State extends State<OrderScreen> {
               ),
             ),
     Expanded(
-            child: PageView(  scrollDirection: Axis.horizontal,
-            controller:pageController,
-            onPageChanged: (value) {
-             
-              setState(() {
-                 selectedindex=value;
-              });
-            },
-              children: [
-              
-              PendingScreen(
-                onNext: () {
-                  pageController.nextPage(duration: Duration(milliseconds: 100), curve: Easing.standard);
-                },
-              ),
-              DeliveredScreen(onNext: () {
-                  pageController.nextPage(duration: Duration(milliseconds: 100), curve: Easing.standard);
-                },),
-              CancelledScreen()
+      child: selectedindex==0?PendingScreen(onNext: () {
+        
+      },):selectedindex==1?DeliveredScreen(onNext: () {
+        
+      },):CancelledScreen()
+            // child: PageView(  scrollDirection: Axis.horizontal,
             
-            ],),
+            // controller:pageController,
+
+            // onPageChanged: (value) {
+             
+            //   setState(() {
+            //      selectedindex=value;
+            //   });
+            // },
+            //   children: [
+              
+            //   PendingScreen(
+            //     onNext: () {
+            //       pageController.nextPage(duration: Duration(milliseconds: 100), curve: Easing.standard);
+            //     },
+            //   ),
+            //   DeliveredScreen(onNext: () {
+            //       pageController.nextPage(duration: Duration(milliseconds: 100), curve: Easing.standard);
+            //     },),
+            //   CancelledScreen()
+            
+            // ],),
           )
           ],
         ),

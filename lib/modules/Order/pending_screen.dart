@@ -30,9 +30,10 @@ class _PendingScreenState extends State<PendingScreen> {
                   vertical: BorderSide(color: Color(0xffF9F9F9))),
               boxShadow: [
                 BoxShadow(
-                  blurRadius: 16,
+                  blurRadius: 20,
                   color: Color(0xff0F0F0F33),
-                  spreadRadius: -8,
+                  spreadRadius: -1,
+                  offset: Offset(0, 9)
                 )
               ],
               color: Colors.white),
