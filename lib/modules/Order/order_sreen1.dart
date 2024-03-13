@@ -1,6 +1,7 @@
-import 'package:fashion_store/Order/cancelled_screen.dart';
-import 'package:fashion_store/Order/delivered_screen.dart';
-import 'package:fashion_store/Order/pending_screen.dart';
+
+import 'package:fashion_store/modules/Order/cancelled_screen.dart';
+import 'package:fashion_store/modules/Order/delivered_screen.dart';
+import 'package:fashion_store/modules/Order/pending_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
