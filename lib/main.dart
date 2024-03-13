@@ -5,6 +5,7 @@ import 'package:fashion_store/modules/Cart/checkout.dart';
 import 'package:fashion_store/modules/Cart/checkout1.dart';
 import 'package:fashion_store/modules/Ongoing_Page/Controller/landing_pagecntrl.dart';
 import 'package:fashion_store/modules/Ongoing_Page/ongoing_screen.dart';
+import 'package:fashion_store/modules/Order/order_info.dart';
 import 'package:fashion_store/modules/Product/Controller/home_controller.dart';
 import 'package:fashion_store/modules/Product/bottombar.dart';
 import 'package:fashion_store/modules/Product/collection_page1.dart';
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: HomeScreen(),
+        home: OrderInfoScreen(),
        
        
       ),

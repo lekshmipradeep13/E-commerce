@@ -24,7 +24,7 @@ class _OrderInfoScreenState extends State<OrderInfoScreen> {
         title: Center(
             child: Text(
           'Order #1514',
-          style: GoogleFonts.ptSans(fontSize: 18),
+          style: GoogleFonts.ptSans(fontSize: 18,color: Color(0xff1D1F22)),
         )),
       ),
       body: Padding(
@@ -204,8 +204,8 @@ class _OrderInfoScreenState extends State<OrderInfoScreen> {
                     height: 44,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24),
-                        border: Border.all(color: Color(0xff777E90))),
-                  child: Center(child: Text('Rate')),),
+                        border: Border.all(color: Color(0xff777E90)),color: Color(0xff343434)),
+                  child: Center(child: Text('Rate',style: GoogleFonts.ptSans(fontSize: 16,color: Colors.white),)),),
                 )
               ],
             )

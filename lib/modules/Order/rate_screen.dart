@@ -21,8 +21,9 @@ class _RateScreenState extends State<RateScreen> {
         title: Center(
             child: Text(
           'Rate Product',
-          style: GoogleFonts.ptSans(fontSize: 18),
+          style: GoogleFonts.ptSans(fontSize: 18,color: Color(0xff1D1F22)),
         )),
-      ),);
+      ),body: Column(children: [],),
+      );
   }
 }

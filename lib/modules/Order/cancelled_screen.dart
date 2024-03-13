@@ -44,7 +44,7 @@ class _CancelledScreenState extends State<CancelledScreen> {
             Row(
               children: [
                 Text(
-                  'ancelled',
+                  'Cancelled',
                   style: GoogleFonts.ptSans(color: Colors.red),
                 )
               ],
