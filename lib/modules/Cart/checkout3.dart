@@ -1,4 +1,5 @@
-import 'package:fashion_store/Order/order_sreen1.dart';
+
+import 'package:fashion_store/modules/Order/order_sreen1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

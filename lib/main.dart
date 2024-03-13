@@ -1,5 +1,5 @@
-import 'package:fashion_store/Order/order_info.dart';
-import 'package:fashion_store/Order/order_sreen1.dart';
+
+
 import 'package:fashion_store/modules/Cart/cart_screen.dart';
 import 'package:fashion_store/modules/Cart/checkout.dart';
 import 'package:fashion_store/modules/Cart/checkout1.dart';
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:   HomeScreen
+        home:   BottomScreen
         (),
       ),
     );
