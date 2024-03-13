@@ -1,4 +1,4 @@
-import 'package:fashion_store/Order/order_sreen1.dart';
+import 'package:fashion_store/modules/Order/order_sreen1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -57,7 +57,7 @@ class _CompleteScreenState extends State<CompleteScreen> {
                     style: GoogleFonts.ptSans(fontSize: 16),
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderScreen(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>OrderScreen(),));
                   },
                   color: Colors.black,
                 ),

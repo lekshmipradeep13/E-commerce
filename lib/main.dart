@@ -1,5 +1,3 @@
-import 'package:fashion_store/Order/order_info.dart';
-import 'package:fashion_store/Order/order_sreen1.dart';
 import 'package:fashion_store/modules/Cart/cart_screen.dart';
 import 'package:fashion_store/modules/Cart/checkout.dart';
 import 'package:fashion_store/modules/Cart/checkout1.dart';
@@ -39,11 +37,9 @@ void main()async {
   );
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -56,12 +52,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:   HomeScreen
-        (),
+        home: HomeScreen(),
       ),
     );
   }

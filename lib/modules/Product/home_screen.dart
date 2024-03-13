@@ -300,62 +300,6 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         ),
       ],
     )
-        //  Column(children: [
-        // Padding(
-        //   padding: const EdgeInsets.only(top: 68,left: 52),
-        //   child: Row(children: [
-        //     Image.asset('assets/profileimg.png',width: 52,height: 52,),
-        //     SizedBox(width: 17,),
-        //     Column(children: [Text('Sunie Pham',style: GoogleFonts.ptSans(fontWeight: FontWeight.w700,fontSize: 16),),
-        //     Text('sunieux@gmail.com',style: GoogleFonts.ptSans(fontWeight: FontWeight.w500,fontSize: 12),)
-        //     ],)
-        //   ],),
-        // ),
-        //   SizedBox(height: 71,),
-        // Container(height:55 ,width:267 ,
-        // child: Row(children: [
-        //   Image.asset('assets/Home.png',width: 16,height: 17,),
-        //   SizedBox(width: 20,),
-        //   Text('Homepage',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        // ],),),
-        //   Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Icon(Icons.search),
-        //     SizedBox(width: 20,),
-        //     Text('Discover',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),),
-        //    Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Image.asset('assets/carticon.png',width: 16,height: 17,),
-        //     SizedBox(width: 20,),
-        //     Text('My Order',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),),
-        //    Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Image.asset('assets/Profileicon.png',width: 16,height: 17,),
-        //     SizedBox(width: 20,),
-        //     Text('My profile',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),),
-        //   Text('OTHER',style: GoogleFonts.ptSans(fontSize: 14,fontWeight: FontWeight.w500,color: Color(0xff777E90))),
-        //    Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Image.asset('assets/settings.png',width: 16,height: 17,),
-        //     SizedBox(width: 20,),
-        //     Text('Setting',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),),
-        //   Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Image.asset('assets/support.png',width: 16,height: 17,),
-        //     SizedBox(width: 20,),
-        //     Text('Support',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),),Container(height:55 ,width:267 ,
-        //   child: Row(children: [
-        //     Image.asset('assets/policyicon.png',width: 16,height: 17,),
-        //     SizedBox(width: 20,),
-        //     Text('About us',style: GoogleFonts.ptSans(fontSize: 16,fontWeight: FontWeight.w700),)
-        //   ],),)
-
-        // ],),
         );
   }
 }
