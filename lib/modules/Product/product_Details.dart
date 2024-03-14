@@ -31,12 +31,13 @@ class _ProductDetilScreenState extends State<ProductDetilScreen> {
         children: [
           Container(
             height: height * 0.35,
+            // height: 460,
             width: 355,
             child: Stack(children: [
               CarouselSlider(
                 items: [
                   Container(
-                    height: 300,
+                    height: 400,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       image: DecorationImage(
