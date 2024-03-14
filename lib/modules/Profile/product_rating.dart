@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,8 +28,8 @@ class _ProductRatingState extends State<ProductRating> {
             Center(
               child: Text(
                 'What is your opinion of GemStore?',
-                style:
-                    GoogleFonts.ptSans(fontSize: 14, fontWeight: FontWeight.w500),
+                style: GoogleFonts.ptSans(
+                    fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(height: 24),
@@ -50,11 +53,13 @@ class _ProductRatingState extends State<ProductRating> {
             SizedBox(
               height: 69,
             ),
-            Container(padding: EdgeInsets.only(top:29 ,left:26 ,right: 27),
+            Container(
+              padding: EdgeInsets.only(top: 29, left: 26, right: 27),
               // height: 267,
               width: 308,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 9,
@@ -71,10 +76,18 @@ class _ProductRatingState extends State<ProductRating> {
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText:
-                            'Would you like to write anything about\n this product? ',hintStyle: GoogleFonts.ptSans(fontSize: 12,color: Color(0xff5A5A5A))),
+                            'Would you like to write anything about\n this product? ',
+                        hintStyle: GoogleFonts.ptSans(
+                            fontSize: 12, color: Color(0xff5A5A5A))),
                   ),
-                  SizedBox(height: 55,),
-                  Text('50 characters',style: GoogleFonts.ptSans(fontSize: 12,color: Color(0xff5A5A5A)),)
+                  SizedBox(
+                    height: 55,
+                  ),
+                  Text(
+                    '50 characters',
+                    style: GoogleFonts.ptSans(
+                        fontSize: 12, color: Color(0xff5A5A5A)),
+                  )
                 ],
               ),
             ),
@@ -111,7 +124,59 @@ class _ProductRatingState extends State<ProductRating> {
                   'Send feedback',
                   style: GoogleFonts.ptSans(color: Colors.white, fontSize: 16),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                 
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Image.asset(
+                        'assets/checkicon.png',
+                        width: 81,
+                        height: 81,
+                      ),
+                      content: SizedBox(height: 150,width:327 ,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Thank you for your feedback!',
+                              style: GoogleFonts.ptSans(
+                                  fontSize: 16, color: Color(0xff43484B)),
+                            ),
+                            SizedBox(
+                              height: 24,
+                            ),
+                            Text(
+                              'We appreciated your feedback.\nWe’ll use your feedback to improve \nyour experience.',textAlign:TextAlign.center  ,
+                              style: GoogleFonts.ptSans(
+                                  fontSize: 14, color: Color(0xff6E768A)),
+                            )
+                          ],
+                        ),
+                      ),
+                      actions: [
+                        Center(
+                          child: SizedBox(
+                            width:101 ,height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Done',
+                                style: GoogleFonts.ptSans(
+                                    fontSize: 14, color: Colors.white),
+                              ),
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.black),
+                                    
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                },
               ),
             )
           ],
