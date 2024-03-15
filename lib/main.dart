@@ -21,10 +21,12 @@ import 'package:fashion_store/modules/Profile/profile_setting.dart';
 import 'package:fashion_store/modules/Profile/settings_screen.dart';
 import 'package:fashion_store/modules/Profile/voucher.dart';
 import 'package:fashion_store/modules/Profile/wishlist.dart';
-import 'package:fashion_store/modules/Register/controller.dart';
+import 'package:fashion_store/modules/Register/Controller/controller.dart';
+import 'package:fashion_store/modules/Register/Controller/registration_cntrl.dart';
 import 'package:fashion_store/modules/Register/password_screen.dart';
 
 import 'package:fashion_store/modules/Register/verification_Code.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -51,16 +53,32 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider(create: (context) => Productcontroller(),),
 
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) => RegistrationController(),)
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: StreamBuilder(
+            stream: FirebaseAuth.instance.authStateChanges(),
+            builder: (context, snapshot) {
+              if(snapshot.connectionState==ConnectionState.waiting){
+                return CircularProgressIndicator();
+              }
+              if(snapshot.hasData){
+                return BottomScreen();
+              }
+              return OngoingScreen();
+            }
+          ),
+         
+         
         ),
-        home: ProductRating(),
-       
-       
       ),
     );
   }

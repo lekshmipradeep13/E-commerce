@@ -1,6 +1,7 @@
 import 'package:fashion_store/modules/Profile/address.dart';
 import 'package:fashion_store/modules/Profile/voucher.dart';
 import 'package:fashion_store/modules/Profile/wishlist.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -158,23 +159,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
              
                Divider(color: Color(0xffF3F3F6),),
-                 ListTile(
-                leading: Image.asset(
-                  'assets/Logout.png',
-                  height: 24,
-                  width: 24,
-                ),
-                title: Text(
-                  'Log out',
-                  style:
-                      GoogleFonts.ptSans(fontSize: 14, color: Color(0xff33302E)),
-                ),
-                trailing: Image.asset(
-                  'assets/Arrow - Right 2.png',
-                  height: 20,
-                  width: 20,
-                ),
-              ),
+                 GestureDetector(
+                  onTap: () {
+                    FirebaseAuth.instance.signOut();
+                  },
+                   child: ListTile(
+                                   leading: Image.asset(
+                    'assets/Logout.png',
+                    height: 24,
+                    width: 24,
+                                   ),
+                                   title: Text(
+                    'Log out',
+                    style:
+                        GoogleFonts.ptSans(fontSize: 14, color: Color(0xff33302E)),
+                                   ),
+                                   trailing: Image.asset(
+                    'assets/Arrow - Right 2.png',
+                    height: 20,
+                    width: 20,
+                                   ),
+                                 ),
+                 ),
               Divider(color: Color(0xffF3F3F6),),
                       ],) ,
                 )

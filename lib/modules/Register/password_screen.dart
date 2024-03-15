@@ -1,6 +1,6 @@
 import 'package:fashion_store/modules/Product/bottombar.dart';
 import 'package:fashion_store/modules/Product/home_screen.dart';
-import 'package:fashion_store/modules/Register/controller.dart';
+import 'package:fashion_store/modules/Register/Controller/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
