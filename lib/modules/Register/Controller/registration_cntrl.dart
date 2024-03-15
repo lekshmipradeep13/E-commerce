@@ -7,15 +7,17 @@ import 'package:flutter/cupertino.dart';
 
 
 class RegistrationController extends ChangeNotifier{
+  FirebaseAuth auth=  FirebaseAuth.instance;
   registerUser({required String name,required String email,required String password})async{
 try {
       final credential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          await auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
       log(credential.toString());
       await saveUser(UserModel(uid: credential.user!.uid, email: email, name: name));
+      notifyListeners();
      
       
     } on FirebaseAuthException catch (e) {

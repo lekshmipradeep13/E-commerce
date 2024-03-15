@@ -172,7 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                    title: Text(
                     'Log out',
                     style:
-                        GoogleFonts.ptSans(fontSize: 14, color: Color(0xff33302E)),
+                        GoogleFonts.ptSans(fontSize: 14, color: Color.fromARGB(255, 90, 70, 57)),
                                    ),
                                    trailing: Image.asset(
                     'assets/Arrow - Right 2.png',

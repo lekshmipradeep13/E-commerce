@@ -22,6 +22,7 @@ import 'package:fashion_store/modules/Profile/settings_screen.dart';
 import 'package:fashion_store/modules/Profile/voucher.dart';
 import 'package:fashion_store/modules/Profile/wishlist.dart';
 import 'package:fashion_store/modules/Register/Controller/controller.dart';
+import 'package:fashion_store/modules/Register/Controller/login_controller.dart';
 import 'package:fashion_store/modules/Register/Controller/registration_cntrl.dart';
 import 'package:fashion_store/modules/Register/password_screen.dart';
 
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => RegistrationController(),)
+          ChangeNotifierProvider(create: (context) => RegistrationController(),),
+          ChangeNotifierProvider(create:(context) => LoginController(), )
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,

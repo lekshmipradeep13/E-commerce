@@ -121,7 +121,7 @@ class _SignUPScreenState extends State<SignUPScreen> {
                   SizedBox(height: 40),
                   Center(
                     child: TextButton(onPressed: () {
-                      
+                      Navigator.push(context,  MaterialPageRoute(builder:  (context) => LoginScreen(),));
                     },
                       child: Text(
                         'Already have account?Log In',
