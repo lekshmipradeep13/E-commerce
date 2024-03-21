@@ -1,8 +1,12 @@
+
+import 'package:fashion_store/modules/Product/bottombar.dart';
 import 'package:fashion_store/modules/Profile/address.dart';
 import 'package:fashion_store/modules/Profile/voucher.dart';
 import 'package:fashion_store/modules/Profile/wishlist.dart';
+import 'package:fashion_store/modules/Register/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -160,8 +164,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
              
                Divider(color: Color(0xffF3F3F6),),
                  GestureDetector(
-                  onTap: () {
-                    FirebaseAuth.instance.signOut();
+                  onTap: () async{
+                       await FirebaseAuth.instance.signOut();
+                       Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(), ))  ;
+                            
+                   
+            
                   },
                    child: ListTile(
                                    leading: Image.asset(

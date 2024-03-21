@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:fashion_store/modules/Register/sign_up_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnGoingScreen2 extends StatefulWidget {
@@ -88,7 +89,9 @@ class _CarousilPageState extends State<OnGoingScreen2> {
                                     MaterialStatePropertyAll(Colors.white60),
                                 side: MaterialStatePropertyAll(
                                     BorderSide(color: Colors.white))),
-                            onPressed: () {
+                            onPressed: ()async {
+                              final box = GetStorage();
+                            await  box.write("add", true);
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(

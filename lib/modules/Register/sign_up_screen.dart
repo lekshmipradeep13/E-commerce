@@ -67,7 +67,7 @@ class _SignUPScreenState extends State<SignUPScreen> {
                   SizedBox(height: 44),
                   Center(
                     child: GestureDetector(onTap: () {
-                      // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
                       value.registerUser(name: name.text, email: email.text, password: password.text);
                     },
                       child: Container(

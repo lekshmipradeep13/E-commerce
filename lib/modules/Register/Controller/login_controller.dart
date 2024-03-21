@@ -5,10 +5,10 @@ import 'package:flutter/cupertino.dart';
 
 
 class LoginController extends ChangeNotifier{
-  
+  final auth= FirebaseAuth.instance;
   login(String email,String password)async{
 try {
-  final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+  final credential = await auth.signInWithEmailAndPassword(
     email: email,
     password: password
   );

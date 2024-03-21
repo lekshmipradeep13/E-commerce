@@ -20,9 +20,8 @@ class _WishlistScreenState extends State<WishlistScreen> {
       builder: (context, value, child) => Scaffold(
           appBar: AppBar(
             leading: Image.asset(
-              'assets/drawericon.png',
-              width: 6,
-              height: 6,
+              'assets/optionicon.png',scale: 4,
+              
             ),
             title: Center(child: Text('My Wishlist')),
             actions: [

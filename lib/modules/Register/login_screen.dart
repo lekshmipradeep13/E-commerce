@@ -1,6 +1,11 @@
+import 'dart:developer';
+
+import 'package:fashion_store/modules/Product/bottombar.dart';
 import 'package:fashion_store/modules/Register/Controller/login_controller.dart';
 import 'package:fashion_store/modules/Register/forgot_password_screen.dart';
+import 'package:fashion_store/modules/Register/sign_up_screen.dart';
 import 'package:fashion_store/modules/Register/verification_Code.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -61,9 +66,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 25),
                         Center(
-                          child: GestureDetector(onTap: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCodeScreen(),));
+                          child: GestureDetector(onTap: ()async {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCodeScreen(),));
                             value.login(email.text, password.text);
+                            var user=await FirebaseAuth.instance.currentUser;
+                            log(user!.uid);
+                            if(user !=null){
+                              
+                              Navigator.push(context,  MaterialPageRoute(builder: (context) => BottomScreen(),));
+                            }
                           },
                             child: Container(
                             padding: EdgeInsets.symmetric(horizontal: 41, vertical: 17),
@@ -116,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 40),
                   Center(
                     child: TextButton(onPressed: () {
-                      
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => SignUPScreen(),));
                     },
                       child: Text(
                         'Don’t have an account?Sign Up',

@@ -6,9 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Onboardingscreen1 extends StatelessWidget {
-  const Onboardingscreen1({super.key});
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
 
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +52,7 @@ class Onboardingscreen1 extends StatelessWidget {
 return;
             }
               
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Onboardingscreen1(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen(),));
             }, 
               
               child: Container(
